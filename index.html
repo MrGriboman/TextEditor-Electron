@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark-custom">
+    <div class="main d-flex flex-row w-100 vh-100 overflow-hidden">
+        <div class="left w-25 h-100 position-relative bg-dark overflow-scroll">
+            <div class="flname w-100 vh-5 d-flex align-items-center font-weight-500 text-white border border-dark">
+                <h6 id="flname">Folder Name</h6>
+            </div>
+            <div class="content">
+                <ul id="files" class="d-flex flex-column w-100 vh-95 overflow-auto">
+
+                </ul>
+            </div>
+        </div>
+        <div id="editor" class="w-75 h-100 position-relative"></div>
+    </div>
+
+    <div class="newFile w-100 h-25">
+        <form id="nw">
+            <input type="text" id="filename" placeholder="Type new file name...">
+        </form>
+    </div>
+
+    <div class="newFolder w-100 h-25">
+        <form id="nwFolder">
+            <input type="text" id="foldername" placeholder="Type new folder name...">
+        </form>
+    </div>
+
+    <div class="context-menu rounded bg-dark">
+        <ul>
+            <li id="rename" class="cursor-pointer file-el">Rename</li>
+            <li id="delete" class="cursor-pointer file-el">Delete</li>
+        </ul>
+    </div>
+
+    <div class="rename">
+        <form id="newName">
+            <input type="text" id="newfilename" class="file-name w-200 h-30" placeholder="Type new file/folder name...">
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/theme-monokai.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
